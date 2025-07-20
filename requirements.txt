@@ -1,2 +1,12 @@
 fastapi[standard]
 uvicorn
+python-dotenv
+langchain
+langsmith
+langchainhub
+langchain_community
+langchain-huggingface
+langchain-google-genai
+chromadb
+faiss-cpu
+sentence-transformers

@@ -6,3 +6,5 @@
 
 Tech Stack
 - FastAPI
+- Langchain
+- FAISS
