@@ -6,6 +6,7 @@ def format_docs(docs):
 
 
 def log_chunks(docs):
+    print(type(docs[0]))
     print("\nRetrieved Chunks:\n" + "\n---\n".join(doc.page_content for doc in docs))
     return docs
 

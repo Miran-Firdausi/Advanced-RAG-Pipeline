@@ -4,7 +4,7 @@ from utilities.hashing import calculate_hash
 # from utilities.redis_cache import get_cached_summary, cache_summary
 from utilities.file_utils import get_doc_by_hash, save_doc_data, extract_using_textract
 from utilities.redis_cache import get_cached_data
-from utilities.llm_utils import answer_from_structured_data
+from utilities.llm_utils import answer_from_structured_data, create_embeddings
 
 
 def handle_document(file_bytes, filename, questions):
@@ -29,11 +29,12 @@ def handle_document(file_bytes, filename, questions):
     if not doc_data:
         # Step 2: Process new doc
         doc_data = extract_using_textract(file_path, file_hash)
-        json_data_path = f"docs/{file_hash}.json"
+        json_data_path = f"docs/extracted/{file_hash}.json"
         save_doc_data(doc_data, json_data_path)
 
     # Step 3: Use LLM to answer questions
-    answers = answer_from_structured_data(doc_data, questions)
+    create_embeddings(doc_data, file_hash)
+    answers = answer_from_structured_data(file_hash, questions)
     return {"answers": answers}
 
 

@@ -34,3 +34,22 @@ CLARIFY_USER_QUERY_PROMPT = ChatPromptTemplate.from_messages(
         ),
     ]
 )
+
+BASIC_PROMPT = f"""
+"Answer the following question using short, clear, and descriptive statements. Focus on directly addressing the query based on the provided context. Avoid unnecessary elaboration, but ensure the core information is complete and accurate."
+
+Examples Using the Template:
+Q. What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?
+A. A grace period of thirty days is provided for premium payment after the due date to renew or continue the policy without losing continuity benefits.
+
+Note: Reply with just the statement and nothing else.
+
+<Context>:
+{{context}}
+<ContextEnd>
+
+Question:
+{{question}}
+
+Answer:
+"""
