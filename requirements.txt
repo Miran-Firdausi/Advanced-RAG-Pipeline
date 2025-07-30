@@ -10,3 +10,7 @@ langchain-google-genai
 chromadb
 faiss-cpu
 sentence-transformers
+sqlalchemy 
+psycopg2-binary 
+redis
+boto3
