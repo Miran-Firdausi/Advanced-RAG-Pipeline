@@ -1,3 +1,4 @@
+import traceback
 import requests
 from fastapi import FastAPI, APIRouter, Request, Depends, UploadFile, File
 from fastapi.responses import JSONResponse
@@ -34,7 +35,9 @@ async def answer_queries(request: Request):
         result = handle_document(file_bytes, filename, questions)
         return JSONResponse(content=result)
     except Exception as e:
-        return JSONResponse(status_code=500, content={"error": str(e)})
+        tb = traceback.format_exc()
+        print(tb)
+        return JSONResponse(status_code=500, content={"error": str(e), "traceback": tb})
 
 
 app.include_router(api_router)
