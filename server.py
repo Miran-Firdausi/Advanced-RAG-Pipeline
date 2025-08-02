@@ -32,7 +32,7 @@ async def answer_queries(request: Request):
         filename = doc_url.split("/")[-1].split("?")[0]
 
         # Process the document
-        result = handle_document(file_bytes, filename, questions)
+        result = await handle_document(file_bytes, filename, questions)
         return JSONResponse(content=result)
     except Exception as e:
         tb = traceback.format_exc()

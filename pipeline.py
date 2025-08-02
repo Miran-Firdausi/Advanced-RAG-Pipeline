@@ -2,12 +2,17 @@ import os
 from utilities.hashing import calculate_hash
 
 # from utilities.redis_cache import get_cached_summary, cache_summary
-from utilities.file_utils import get_doc_by_hash, save_doc_data, extract_using_textract
+from utilities.file_utils import (
+    get_doc_by_hash,
+    save_doc_data,
+    extract_using_textract,
+    load_pdf_using_PyPDF,
+)
 from utilities.redis_cache import get_cached_data
 from utilities.llm_utils import answer_from_structured_data, create_embeddings
 
 
-def handle_document(file_bytes, filename, questions):
+async def handle_document(file_bytes, filename, questions):
     file_hash = calculate_hash(file_bytes)
 
     # Store file with filename (hash + file extension)
@@ -28,9 +33,9 @@ def handle_document(file_bytes, filename, questions):
     doc_data = get_doc_by_hash(file_hash)
     if not doc_data:
         # Step 2: Process new doc
-        doc_data = extract_using_textract(file_path, file_hash)
-        json_data_path = f"docs/extracted/{file_hash}.json"
-        save_doc_data(doc_data, json_data_path)
+        doc_data = await load_pdf_using_PyPDF(file_path)
+        # json_data_path = f"docs/extracted/{file_hash}.json"
+        # save_doc_data(doc_data, json_data_path)
 
     # Step 3: Use LLM to answer questions
     create_embeddings(doc_data, file_hash)

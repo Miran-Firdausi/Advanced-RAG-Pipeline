@@ -15,3 +15,7 @@ psycopg2-binary
 redis
 boto3
 textract-trp
+llama-index
+rank_bm25
+google-generativeai
+google-genai
