@@ -24,9 +24,8 @@ def create_embeddings(doc_data, file_hash):
     # Splitting into chunks
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     # text = doc_data.get("text")
-    text = doc_data
+    splits = text_splitter.split_documents(doc_data)
     # docs = [Document(page_content=text)]
-    splits = text_splitter.split_documents(text)
 
     vector_store_path = f"vector_store/{file_hash}"
     if not os.path.exists(vector_store_path):
