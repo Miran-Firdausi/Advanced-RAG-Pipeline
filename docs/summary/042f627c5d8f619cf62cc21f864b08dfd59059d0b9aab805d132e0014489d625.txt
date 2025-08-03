@@ -1,0 +1,89 @@
+This document outlines the **National Parivar Mediclaim Plus Policy**, an indemnity-based health insurance plan offered by National Insurance Company Limited. It covers medical expenses for illness or injury requiring hospitalization, day care treatment, or domiciliary hospitalization, up to a Floater Sum Insured for the insured family.
+
+Here's a summary of its key aspects:
+
+**1. Core Coverage & Benefits:**
+*   **In-patient Treatment:** Covers room/ICU charges (with limits based on Plan A/B/C or PPN rates), medical practitioner fees, anesthesia, blood, oxygen, OT charges, surgical appliances, medicines, diagnostic procedures, internally implanted prosthetics, dental treatment due to injury, plastic surgery, medically necessary hormone replacement, vitamins/tonics (if part of treatment), and circumcision (if medically necessary).
+*   **Pre & Post Hospitalization:** Covers medical expenses incurred up to 30 days before hospitalization and up to 60 days after discharge, for the same condition.
+*   **Domiciliary Hospitalization:** Covers medical treatment at home if the patient cannot be moved to a hospital or due to non-availability of beds. Specific exclusions apply (e.g., treatment less than 3 days, certain chronic conditions like asthma, bronchitis, arthritis, psychiatric disorders).
+*   **Day Care Procedures:** Covers treatments requiring less than 24 hours of hospitalization due to technological advancement.
+*   **AYUSH Treatment:** Covers in-patient treatment under Ayurveda, Yoga, Naturopathy, Unani, Siddha, and Homeopathy systems in recognized AYUSH Hospitals, up to the Sum Insured.
+*   **Organ Donor Expenses:** Covers medical expenses for organ harvesting from a donor for an insured person's transplant, under specific conditions. Excludes pre/post-hospitalization of donor, acquisition costs, experimental treatments, complications, and transportation.
+*   **Hospital Cash:** A daily allowance (max 5 days for Plan A, 10 days for Plan B/C) if hospitalization exceeds 3 days (payable from 4th day).
+*   **Ambulance & Air Ambulance:** Reimburses transportation charges to/from hospitals. Air ambulance is covered for Plan B/C.
+*   **Medical Emergency Reunion:** Reimburses round-trip airfare for a family member for hospitalization exceeding 5 continuous days in ICU (Plan B/C).
+*   **Doctor's Home Visit & Nursing Care:** Covers medically necessary expenses post-hospitalization.
+*   **Anti Rabies Vaccination:** Covers medically necessary expenses (hospitalization not required).
+*   **Maternity Expenses:** Covers childbirth (normal/caesarean) and lawful medical termination of pregnancy after a 24-month waiting period (2 deliveries limit). New Born Baby is covered from birth for up to 3 months. Exclusions apply (e.g., age limits, ectopic pregnancy is covered under in-patient treatment).
+*   **Infertility Treatment:** Covers in-patient or day care treatment for infertility after a 24-month waiting period, with a maximum of two claims in a lifetime. Specific conditions and exclusions apply.
+*   **Vaccination for Children:** Covers listed vaccinations for children up to 12 years (male) and 14 years (female).
+*   **HIV/AIDS Cover:** Covers all stages of HIV infection.
+*   **Mental Illness Cover:** Covers in-patient treatment for mental illnesses in specified hospital departments.
+*   **Modern Treatment:** Covers specific modern treatments (e.g., Robotic Surgery, Stem Cell Therapy for hematopoietic conditions) up to 25% of the Sum Insured.
+*   **Morbid Obesity Treatment:** Covers surgical treatment for obesity under specific BMI and comorbidity conditions, after a 3-year waiting period.
+*   **Correction of Refractive Error:** Covers treatment for refractive error >7.5 dioptres after a 2-year waiting period.
+*   **Reinstatement of Sum Insured:** Sum Insured is reinstated once per policy year if exhausted due to claims from a Road Traffic Accident.
+
+**2. Good Health Incentives:**
+*   **No Claim Discount (NCD):** 5% discount on base premium for claim-free renewals (for 1-year policies, aggregated for multi-year policies).
+*   **Health Check-Up:** Reimbursement of expenses after two continuous claim-free policy years.
+
+**3. Waiting Periods (Exclusions):**
+*   **Pre-Existing Diseases (PED):** Excluded for 36 months of continuous coverage.
+*   **Specified Diseases/Procedures:** Excluded for varying periods (90 days, 1 year, 2 years, or 3 years) from policy inception, including:
+    *   **90 Days:** Hypertension, Diabetes, Cardiac conditions.
+    *   **1 Year:** Benign ENT disorders, Tonsillectomy, Adenoidectomy, Mastoidectomy, Tympanoplasty.
+    *   **2 Years:** Cataract, Hernia, Hydrocele, Fissure/Fistula, Piles, Sinusitis, Polycystic ovarian disease, Non-infective arthritis, Pilonidal sinus, Gout/Rheumatism, Calculus diseases, Gall bladder/bile duct surgery, Genito-urinary system surgery, Prolapsed intervertebral disc surgery, Varicose vein surgery, Hysterectomy, Refractive error >7.5 dioptres, Internal Congenital Anomaly (not for newborn).
+    *   **3 Years:** Joint replacement (unless accident), Osteoarthritis/Osteoporosis, Morbid Obesity, Stem Cell Therapy (hematopoietic only).
+*   **First 30 Days:** Expenses for any illness within 30 days of policy commencement (accidents are covered).
+
+**4. General Exclusions:**
+*   Admissions solely for diagnostics/evaluation.
+*   Rest cure, rehabilitation, respite care.
+*   Change-of-gender treatments.
+*   Cosmetic or plastic surgery (unless for accident, burn, cancer, or medical necessity).
+*   Participation in hazardous/adventure sports (as a professional).
+*   Treatment for breach of law with criminal intent.
+*   Treatment by excluded providers.
+*   Alcohol/drug abuse.
+*   Non-medical admissions (e.g., health hydros, spas, domestic reasons).
+*   Items of personal comfort, service charges, home visit charges (unless specified).
+*   War, nuclear/chemical/biological attack.
+*   Treatment outside India.
+*   Treatment for a condition different from the one for which hospitalization was claimed.
+*   Medical equipment usable at home (e.g., CPAP, crutches, glucometer).
+*   Non-prescription drugs.
+
+**5. Policy Conditions:**
+*   **Disclosure:** Policy is void for misrepresentation or non-disclosure of material facts.
+*   **Claim Procedure:**
+    *   **Notification:** 72 hours prior for planned hospitalization, 24 hours for emergency.
+    *   **Cashless Facility:** Available at Network/PPN hospitals with pre-authorization from TPA.
+    *   **Reimbursement:** Documents to be submitted within specified timelines (e.g., 15 days from discharge for hospitalization).
+*   **Zone-based Co-payment:** Claim admissibility is affected by the zone for which premium is paid vs. the zone where treatment is taken (e.g., Zone II premium, treatment in Zone I incurs 5% co-payment).
+*   **Optional Co-payment:** Option to choose 10% or 20% co-payment for premium discount.
+*   **Moratorium Period:** Claims non-contestable after 60 continuous months of coverage (except fraud).
+*   **Territorial Limit:** Treatment must be taken in India.
+*   **Multiple Policies:** Policyholder can choose insurer or claim disallowed amounts from other policies.
+*   **Fraud:** Benefits forfeited if fraud is established.
+*   **Cancellation:** Company can cancel for misrepresentation/fraud with 15 days' notice (no refund). Policyholder can cancel with 7 days' notice (proportionate refund applies).
+*   **Renewal:** Lifetime renewal, no denial based on claims, 30-day grace period.
+*   **Enhancement of Sum Insured:** Possible at renewal, but new waiting periods apply to the increased amount.
+*   **Portability & Migration:** Options to transfer credits for waiting periods to other insurers/products within the same company.
+*   **Free Look Period:** 30 days for new individual policies to review terms.
+*   **Nomination:** Policyholder can nominate a person for claim payment in case of death.
+
+**6. Optional Covers (on payment of additional premium):**
+*   **Pre-existing Diabetes/Hypertension:** Covers these conditions from inception, but with sub-limits (25% of SI in 1st year, 50% in 2nd year, 75% in 3rd year).
+*   **Out-patient Treatment:** Covers consultations, diagnostic tests, medicines, and dental treatment (fixed limits INR 2,000 - 25,000).
+*   **Critical Illness:** Provides a lump sum benefit (50% of SI, up to specified amounts like INR 2-25 Lakhs) upon diagnosis of specified critical illnesses (e.g., Stroke, Cancer, Kidney Failure, Major Organ Transplant, Multiple Sclerosis, Open Chest CABG, Permanent Paralysis, Blindness) and a 30-day survival period.
+*   **National Home Care Treatment Add-On.**
+*   **National Non-Medical Expenses Add-on.**
+
+**7. Discounts:**
+*   Online Discount (10% for direct online purchases).
+*   Co-payment Discount.
+*   Long Term Discount (for 2 or 3-year policies).
+*   No Maternity/Infertility Discount (3% if opting out of maternity/infertility cover for over 45 years of age).
+
+For full details, including specific lists in Annexures (e.g., detailed vaccination schedule, items not covered or subsumed), it is recommended to refer to the complete policy document. Grievance redressal contact details are provided for any issues.

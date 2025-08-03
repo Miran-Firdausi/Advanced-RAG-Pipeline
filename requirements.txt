@@ -19,3 +19,4 @@ llama-index
 rank_bm25
 google-generativeai
 google-genai
+pinecone

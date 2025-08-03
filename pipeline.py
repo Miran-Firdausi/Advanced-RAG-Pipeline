@@ -4,12 +4,18 @@ from utilities.hashing import calculate_hash
 # from utilities.redis_cache import get_cached_summary, cache_summary
 from utilities.file_utils import (
     get_doc_by_hash,
+    get_file,
     save_doc_data,
     extract_using_textract,
     load_pdf_using_PyPDF,
+    save_file,
 )
 from utilities.redis_cache import get_cached_data
-from utilities.llm_utils import answer_from_structured_data, create_embeddings
+from utilities.llm_utils import (
+    answer_from_structured_data,
+    create_embeddings,
+    generate_summary,
+)
 
 
 async def handle_document(file_bytes, filename, questions):
@@ -33,6 +39,10 @@ async def handle_document(file_bytes, filename, questions):
     doc_data = get_doc_by_hash(file_hash)
     if not doc_data:
         # Step 2: Process new doc
+        # summary = get_file(f"docs/summary/{file_hash}.txt")
+        # if not summary:
+        # summary = generate_summary(file_bytes)
+        # save_file(summary, f"docs/summary{file_hash}.txt")
         doc_data = await load_pdf_using_PyPDF(file_path)
         # json_data_path = f"docs/extracted/{file_hash}.json"
         # save_doc_data(doc_data, json_data_path)

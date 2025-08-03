@@ -60,3 +60,29 @@ def save_doc_data(result: dict, save_path: str):
     with open(save_path, "w") as f:
         json.dump(result, f, indent=2)
     print(f"[✓] Result cached locally at {save_path}")
+
+
+def save_file(data, save_path):
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    with open(save_path, "wb") as f:
+        f.write(data)
+
+
+def get_file(file_path):
+    with open(file_path, "rb") as f:
+        return f.read()
+
+
+PROCESSED_HASHES_FILE = "docs/processed_hashes.txt"
+
+
+def is_doc_already_processed(file_hash: str) -> bool:
+    if not os.path.exists(PROCESSED_HASHES_FILE):
+        return False
+    with open(PROCESSED_HASHES_FILE, "r") as f:
+        return file_hash in f.read().splitlines()
+
+
+def mark_as_processed(file_hash: str):
+    with open(PROCESSED_HASHES_FILE, "a") as f:
+        f.write(file_hash + "\n")

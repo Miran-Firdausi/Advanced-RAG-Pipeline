@@ -53,3 +53,30 @@ Question:
 
 Answer:
 """
+
+SUMMARY_PROMPT = ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            "You are a helpful assistant. Summarize the following document in a concise and clear manner.",
+        ),
+        (
+            "human",
+            "Document:\n{doc_text}\n\nPlease provide a summary of the above document.",
+        ),
+    ]
+)
+
+
+SIMPLIFY_USER_QUERY = ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            "You are a smart assistant. Your job is to take user's query and simplify it by removing specificity while preserving the core intent of the question, and rewriting to keep only the most relevant part of the question.",
+        ),
+        (
+            "human",
+            "Document Summary:\n{summary}\n\nUser's Question:\n{question}\n\nRewrite this question so that it captures what the user is most likely asking based on the document.",
+        ),
+    ]
+)
