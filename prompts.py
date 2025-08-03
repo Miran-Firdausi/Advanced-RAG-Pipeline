@@ -72,7 +72,7 @@ SIMPLIFY_USER_QUERY = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are a smart assistant. Your job is to take user's query and simplify it by removing specificity while preserving the core intent of the question, and rewriting to keep only the most relevant part of the question.",
+            "You are a smart assistant. Your job is to take user's query and simplify it by removing specificity while preserving the core intent of the question, and rewriting to keep only the most relevant part of the question. Remove specific detail and make the question general.",
         ),
         (
             "human",

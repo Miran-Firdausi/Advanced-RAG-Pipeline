@@ -12,7 +12,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain.schema import Document
-from prompts import BASIC_PROMPT
+from prompts import BASIC_PROMPT, SIMPLIFY_USER_QUERY
 from utilities.file_utils import is_doc_already_processed, load_pdf_using_PyPDF
 from utilities.text_utils import format_docs, log_chunks
 from dotenv import load_dotenv
@@ -72,7 +72,7 @@ def create_embeddings(doc_data, file_hash):
     print("Embeddings created and uploaded to Pinecone!")
 
 
-def answer_from_structured_data(file_hash, questions):
+def answer_from_structured_data(file_hash, questions, summary):
     # Load vector store from Pinecone
     index = pc.Index(index_name)
 
@@ -106,7 +106,9 @@ def answer_from_structured_data(file_hash, questions):
     try:
         answers = []
         for question in questions:
-            answer = rag_chain.invoke(question)
+            simplified_question = simplify_query(summary, question)
+            print(simplified_question)
+            answer = rag_chain.invoke(simplified_question)
             answers.append(answer)
     except Exception as e:
         print(e)
@@ -136,7 +138,21 @@ async def generate_summary(document_file):
     return summary
 
 
-# def simplify_query(query):
+def simplify_query(summary, query):
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.0-flash",
+        temperature=0,
+        max_tokens=None,
+        timeout=None,
+        max_retries=2,
+        google_api_key=os.environ.get("GOOGLE_API_KEY_2"),
+    )
+
+    simplify_chain = SIMPLIFY_USER_QUERY | llm | StrOutputParser()
+
+    simplified_question = simplify_chain.invoke({"summary": summary, "question": query})
+
+    return simplified_question
 
 
 # def answer_using_hyde(file_hash, query):

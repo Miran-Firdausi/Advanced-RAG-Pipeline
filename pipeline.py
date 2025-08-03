@@ -17,12 +17,13 @@ from utilities.llm_utils import (
     generate_summary,
 )
 
+os.makedirs("docs", exist_ok=True)
+
 
 async def handle_document(file_bytes, filename, questions):
     file_hash = calculate_hash(file_bytes)
 
     # Store file with filename (hash + file extension)
-    os.makedirs("docs", exist_ok=True)
     _, ext = os.path.splitext(filename)
     file_path = os.path.join("docs", file_hash + ext)
     if not os.path.exists(file_path):
@@ -39,17 +40,17 @@ async def handle_document(file_bytes, filename, questions):
     doc_data = get_doc_by_hash(file_hash)
     if not doc_data:
         # Step 2: Process new doc
-        # summary = get_file(f"docs/summary/{file_hash}.txt")
-        # if not summary:
-        # summary = generate_summary(file_bytes)
-        # save_file(summary, f"docs/summary{file_hash}.txt")
+        summary = get_file(f"docs/summary/{file_hash}.txt")
+        if not summary:
+            summary = generate_summary(file_bytes)
+            save_file(summary, f"docs/summary{file_hash}.txt")
         doc_data = await load_pdf_using_PyPDF(file_path)
         # json_data_path = f"docs/extracted/{file_hash}.json"
         # save_doc_data(doc_data, json_data_path)
 
     # Step 3: Use LLM to answer questions
     create_embeddings(doc_data, file_hash)
-    answers = answer_from_structured_data(file_hash, questions)
+    answers = answer_from_structured_data(file_hash, questions, summary)
     return {"answers": answers}
 
 
