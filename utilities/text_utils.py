@@ -2,7 +2,7 @@ from langchain.load import dumps, loads
 
 
 def format_docs(docs):
-    return "\n\n".join(doc for doc in docs)
+    return "\n\n".join(doc.page_content for doc in docs)
 
 
 def log_chunks(docs):

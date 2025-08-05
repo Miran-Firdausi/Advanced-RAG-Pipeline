@@ -1,0 +1,68 @@
+This document is an owner's manual for the Hero MotoCorp SUPER SPLENDOR motorcycle. It covers a wide range of topics from basic operation and maintenance to safety and troubleshooting.
+
+Vehicle Information & Specifications:
+
+The SUPER SPLENDOR conforms to the latest BS6 STAGE-VI (OBD STAGE II-A) regulations for emissions, safety, and noise levels. It also uses non-asbestos brake shoes/pads and engine gaskets.
+
+
+The vehicle is equipped with an "Automatic Headlamp ON" feature, as mandated by the Indian government, which keeps the headlamp on whenever the engine is on to improve rider safety.
+
+Key specifications include:
+
+Dimensions: Overall length of 2042 mm, width of 740 mm (Disc-Drum) or 714 mm (Drum-Drum), and a wheelbase of 1267 mm.
+
+Weight: Kerb weight of 123 kg (Disc-Drum) or 122 kg (Drum-Drum).
+
+Engine: 124.7 cc displacement with a maximum power of 8 kW @ 7500 r/min and maximum torque of 10.6 N-m @ 6000 r/min.
+
+Tires: Tubeless tires with a front size of 80/100-18 47P and a rear size of 90/90-18 51P.
+
+Capacities: Fuel tank capacity is 12 liters. Engine oil capacity is 0.95 liters at disassembly and 0.75 liters at draining.
+
+Electricals: It has a 12V-4Ah/ETZ5 Maintenance Free (MF) battery and a 140 W @5000 r/min alternator.
+
+Key Features and Controls:
+
+The motorcycle has an LCD panel that displays information such as the speedometer, odometer, tripmeter, real-time mileage indicator (RTMI), and a digital clock.
+
+
+It features an "i3s (IDLE STOP START SYSTEM)" to save fuel and reduce pollution by automatically turning off the engine after 5 seconds of idling. The system can be turned on or off with a switch.
+
+
+
+
+A "Side stand engine kill" feature prevents the engine from starting when the transmission is in gear and the side stand is down, and it also stops a running engine if the side stand is moved down while in gear.
+
+
+The vehicle is fitted with a USB charger located on the left side of the inner panel for charging mobile phones.
+
+Maintenance and Safety:
+
+The manual provides a detailed maintenance schedule and emphasizes the importance of regular servicing at an Authorised Hero MotoCorp workshop.
+
+
+
+Routine checks should include engine oil level, brakes, tires, clutch, drive chain, and all lights and switches.
+
+It strongly recommends wearing a helmet, eye protection, and other protective gear while riding.
+
+
+
+The manual warns against using non-Hero MotoCorp accessories or making modifications, as this can make the vehicle unsafe and even illegal.
+
+
+For a healthy environment, the document advises using BS-VI grade fuel, getting regular servicing, and using genuine spare parts and engine oil.
+
+
+
+The vehicle's catalytic converter requires unleaded petrol and a well-running engine to function effectively.
+
+Warranty Information:
+
+The SUPER SPLENDOR has a warranty for 5 years or 70,000 km, whichever comes first.
+
+An emission warranty is valid for 3 years or 30,000 km, whichever comes earlier.
+
+The battery warranty is 18 months from the date of sale or 20,000 km, or 21 months from the date of charging, whichever is earlier.
+
+The warranty can be voided if non-compatible engine oil is used, unauthorized modifications are made, or the vehicle is used for competitive events.

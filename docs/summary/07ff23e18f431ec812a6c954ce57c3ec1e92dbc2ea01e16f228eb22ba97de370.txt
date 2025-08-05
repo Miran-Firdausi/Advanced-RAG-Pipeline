@@ -1,0 +1,46 @@
+The text is divided into three main books, each building upon the previous one to construct a comprehensive physical and mathematical model of the universe.
+
+Book I: Of the Motion of Bodies
+This book lays the foundational principles of dynamics. Newton begins by defining core concepts such as:
+
+Quantity of matter: The product of a body's density and bulk.
+
+Quantity of motion: The product of a body's velocity and quantity of matter.
+
+Vis insita (or innate force of matter): The inherent power of a body to resist changes to its state of rest or uniform motion (also called vis inertiæ).
+
+Impressed force: An action that changes a body's state.
+
+Centripetal force: A force that draws or impels bodies toward a center.
+
+Newton then presents his three Axioms, or Laws of Motion, which form the basis of classical mechanics:
+
+A body at rest remains at rest, and a body in motion remains in motion with a constant velocity in a straight line, unless acted upon by an impressed force.
+
+The change in motion is proportional to the impressed force and is in the direction of the straight line in which the force is impressed.
+
+To every action there is always an equal and opposite reaction.
+
+This book uses these laws to explore the motion of bodies in non-resisting spaces, including solving problems related to elliptical, parabolic, and hyperbolic orbits. The text presents a rigorous mathematical framework, including a section on the "method of first and last ratios of quantities," a precursor to calculus.
+
+Book II: Of the Motion of Bodies (in Resisting Mediums)
+This book extends the principles of Book I by examining the motion of bodies in mediums that offer resistance. It investigates the effects of drag on motion, considering resistance as being proportional to either:
+
+The velocity of the body.
+
+The square of the velocity of the body.
+
+A combination of both.
+
+Newton presents mathematical theorems to describe how objects, including projectiles and oscillating bodies (pendulums), behave in these environments. He provides formulas to calculate the velocity and distance traveled over time. The book includes experimental data from pendulum oscillations and falling bodies in air and water, comparing theoretical calculations with observed phenomena.
+
+Book III: Of the System of the World
+This final book applies the mathematical and physical principles from the previous two to explain astronomical observations and the mechanics of the solar system. Newton outlines four "Rules of Reasoning in Philosophy" to guide scientific inquiry. The book's central argument is that the force responsible for holding planets in their orbits is the same force of gravity that causes objects to fall on Earth. Key conclusions and topics include:
+
+Universal Gravitation: All bodies in the solar system, including planets, moons, and comets, mutually gravitate toward one another with a force that is proportional to their mass and inversely proportional to the square of the distance between them.
+
+Celestial Mechanics: This force explains the elliptical orbits of planets around the sun and the moons around their planets. Newton demonstrates that the sun, though perpetually in motion, never strays far from the center of gravity of the entire solar system.
+
+Terrestrial Phenomena: The theory of gravity is used to explain the oblate spheroid shape of the Earth and other planets due to their rotation. It also provides a detailed physical explanation for the tides, showing how they arise from the combined gravitational forces of the sun and moon.
+
+Comets: The text concludes by identifying comets as a type of planet that travels in highly eccentric, non-circular orbits, and provides methods for calculating their trajectories. Newton infers from their motions that the celestial spaces are "perfectly void of any corporeal fluid," which was a direct refutation of the prevailing vortex theory.

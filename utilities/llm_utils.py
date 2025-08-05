@@ -24,14 +24,13 @@ pinecone_api_key = os.getenv("PINECONE_API_KEY")
 pc = Pinecone(api_key=pinecone_api_key)
 
 # all_mini_embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-# bge_embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5")
-# embeddings = bge_embeddings
+bge_embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en-v1.5")
+embeddings = bge_embeddings
 
 index_name = "hackrx-embeddings"
 
 
-def create_embeddings(doc_data, file_hash):
-
+def create_embeddings_using_pinecone(doc_data, file_hash):
     if is_doc_already_processed(file_hash):
         print("Already processed. Skipping...")
         return
@@ -43,9 +42,6 @@ def create_embeddings(doc_data, file_hash):
             region="us-east-1",
             embed={"model": "llama-text-embed-v2", "field_map": {"text": "chunk_text"}},
         )
-
-    # text = doc_data.get("text")
-    # docs = [Document(page_content=text)]
 
     # Splitting into chunks
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -72,6 +68,25 @@ def create_embeddings(doc_data, file_hash):
     print("Embeddings created and uploaded to Pinecone!")
 
 
+def create_embeddings_using_faiss(doc_data, file_hash):
+    # Splitting into chunks
+    vector_store_path = f"vector_store/{file_hash}"
+    if not os.path.exists(vector_store_path):
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=1000, chunk_overlap=200
+        )
+        if isinstance(doc_data, str):
+            doc_data = [Document(page_content=doc_data)]
+        splits = text_splitter.split_documents(doc_data)
+
+        # Creating Vector Store
+        vector_store = FAISS.from_documents(splits, embedding=embeddings)
+        # Store the vector DB locally to save processing time
+        vector_store.save_local(vector_store_path)
+
+    print("Embeddings created!")
+
+
 def answer_from_structured_data(file_hash, questions, summary):
     # Load vector store from Pinecone
     index = pc.Index(index_name)
@@ -96,6 +111,45 @@ def answer_from_structured_data(file_hash, questions, summary):
     rag_chain = (
         {
             "context": RunnablePassthrough() | retrieve | format_docs,
+            "question": RunnablePassthrough(),
+        }
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+
+    try:
+        answers = []
+        for question in questions:
+            simplified_question = simplify_query(summary, question)
+            print(simplified_question)
+            answer = rag_chain.invoke(simplified_question)
+            answers.append(answer)
+    except Exception as e:
+        print(e)
+
+    return answers
+
+
+def answer_query_using_faiss(file_hash, questions, summary):
+    vector_store = FAISS.load_local(
+        f"vector_store/{file_hash}", embeddings, allow_dangerous_deserialization=True
+    )
+    retriever = vector_store.as_retriever(search_kwargs={"k": 5})
+
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.0-flash",
+        temperature=0,
+        max_tokens=None,
+        timeout=None,
+        max_retries=2,
+    )
+
+    prompt = PromptTemplate.from_template(BASIC_PROMPT)
+
+    rag_chain = (
+        {
+            "context": RunnablePassthrough() | retriever | format_docs,
             "question": RunnablePassthrough(),
         }
         | prompt

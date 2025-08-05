@@ -13,7 +13,8 @@ from utilities.file_utils import (
 from utilities.redis_cache import get_cached_data
 from utilities.llm_utils import (
     answer_from_structured_data,
-    create_embeddings,
+    answer_query_using_faiss,
+    create_embeddings_using_faiss,
     generate_summary,
 )
 
@@ -37,20 +38,21 @@ async def handle_document(file_bytes, filename, questions):
     # if cached_data:
     #     summary = cached_data.decode()
 
-    doc_data = get_doc_by_hash(file_hash)
+    doc_data = str(get_file(f"docs/extracted/{file_hash}.txt"))
     if not doc_data:
         # Step 2: Process new doc
-        summary = get_file(f"docs/summary/{file_hash}.txt")
-        if not summary:
-            summary = generate_summary(file_bytes)
-            save_file(summary, f"docs/summary{file_hash}.txt")
         doc_data = await load_pdf_using_PyPDF(file_path)
         # json_data_path = f"docs/extracted/{file_hash}.json"
         # save_doc_data(doc_data, json_data_path)
 
+    summary = str(get_file(f"docs/summary/{file_hash}.txt"))
+    if not summary:
+        summary = generate_summary(file_bytes)
+        # save_file(summary, f"docs/summary{file_hash}.txt")
+
     # Step 3: Use LLM to answer questions
-    create_embeddings(doc_data, file_hash)
-    answers = answer_from_structured_data(file_hash, questions, summary)
+    create_embeddings_using_faiss(doc_data, file_hash)
+    answers = answer_query_using_faiss(file_hash, questions, summary)
     return {"answers": answers}
 
 

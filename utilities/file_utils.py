@@ -47,10 +47,10 @@ def extract_using_textract(file_path: str, file_hash: str):
 
 
 def get_doc_by_hash(doc_hash):
-    path = os.path.join("docs", "extracted", f"{doc_hash}.json")
+    path = os.path.join("docs", "extracted", f"{doc_hash}.txt")
     if os.path.exists(path):
         with open(path, "r") as f:
-            return json.load(f)
+            return f.read()
     return None
 
 
@@ -69,6 +69,8 @@ def save_file(data, save_path):
 
 
 def get_file(file_path):
+    if not os.path.exists(file_path):
+        return None
     with open(file_path, "rb") as f:
         return f.read()
 

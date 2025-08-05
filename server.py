@@ -22,6 +22,9 @@ async def answer_queries(request: Request):
     doc_url = body.get("documents")
     questions = body.get("questions")
 
+    with open("queries_log.txt", "a", encoding="utf-8") as f:
+        f.write(f"doc_url: {doc_url}\nquestions: {questions}\n\n")
+
     try:
         # Download the document from the URL
         response = requests.get(doc_url)
