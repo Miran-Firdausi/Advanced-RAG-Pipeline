@@ -138,7 +138,7 @@ def answer_query_using_faiss(file_hash, questions, summary):
     retriever = vector_store.as_retriever(search_kwargs={"k": 5})
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
+        model="gemini-2.0-flash-lite",
         temperature=0,
         max_tokens=None,
         timeout=None,
@@ -175,7 +175,7 @@ async def generate_summary(document_file):
         client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
         prompt = "Summarize this document"
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.0-flash-lite",
             contents=[
                 types.Part.from_bytes(
                     data=document_file,
