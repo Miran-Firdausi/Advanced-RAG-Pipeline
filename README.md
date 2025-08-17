@@ -1,4 +1,4 @@
-# Bajaj HackRx 6.0
+# Advanced RAG Question Answering
 
 - Install dependencies: `pip install -r requirements.txt`  
 - Run the server: `fastapi dev server.py` (Dev) `fastapi run server.py` (Production)
